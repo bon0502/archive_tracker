@@ -1,0 +1,19 @@
+body {
+  background-image: url("top.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.top-inner-text {
+  margin-bottom: 20px;
+}
+
