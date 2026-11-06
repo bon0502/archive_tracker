@@ -3,3 +3,17 @@
 @import 'header';
 @import 'footer';
 @import 'top';
+
+body {
+  background-color: #ACA7BB;
+}
+
+.btn-primary {
+  background-color: #ABD3D8;
+  border-color: #ABD3D8;
+}
+
+.btn-primary:hover {
+  background-color: #8AC6CC;
+  border-color: #8AC6CC;
+}
