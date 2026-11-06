@@ -1,10 +1,7 @@
-body {
+.top-wrapper {
   background-image: url("top.jpeg");
   background-size: cover;
   background-position: center;
-}
-
-.top-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
