@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  streamer_name: MyString
+  video_url: MyString
+  video_id: MyString
+  duration_seconds: 1
+  status: 1
+  user: one
+
+two:
+  title: MyString
+  streamer_name: MyString
+  video_url: MyString
+  video_id: MyString
+  duration_seconds: 1
+  status: 1
+  user: two

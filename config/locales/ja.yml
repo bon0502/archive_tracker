@@ -1,0 +1,7 @@
+ja:
+  enums:
+    archive:
+      status:
+        scheduled: "ライブ配信予定"
+        live: "ライブ配信中"
+        ended: "ライブ配信終了"
