@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_11_06_065808) do
+ActiveRecord::Schema[7.1].define(version: 2026_11_12_120348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,5 +37,18 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_06_065808) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "viewing_positions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "archive_id", null: false
+    t.integer "current_position_seconds", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["archive_id"], name: "index_viewing_positions_on_archive_id"
+    t.index ["user_id", "archive_id"], name: "index_viewing_positions_on_user_id_and_archive_id", unique: true
+    t.index ["user_id"], name: "index_viewing_positions_on_user_id"
+  end
+
   add_foreign_key "archives", "users"
+  add_foreign_key "viewing_positions", "archives"
+  add_foreign_key "viewing_positions", "users"
 end

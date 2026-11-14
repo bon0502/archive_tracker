@@ -6,15 +6,18 @@
       <div class="col-md-4 md-3">
         <div class="card h-100 ">
           <% if archive.thumbnail_url.present? %>
-            <%= image_tag archive.thumbnail_url, class: "card-img-top" %>
+            <%= link_to archive_path(archive) do %>
+              <%= image_tag archive.thumbnail_url, class: "card-img-top" %>
+            <% end %>
           <% end %>
           <div class="card-body">
             <p style="font-size: 24px; font-weight: bold; text-align: center;"><%= archive.title %></p>
             <p><strong>配信者名：</strong><%= archive.streamer_name %></p>
-            <p><strong>動画URL：</strong><%= link_to "視聴する", archive.video_url, target: "_blank" %></p>
+            <p><%= link_to "動画を視聴する", archive.video_url, target: "_blank", class: "btn btn-primary" %></p>
             <p><strong>再生時間：</strong><%= archive.duration_seconds %></p>
-            <p><strong>ステータス：</strong><%= t("enums.archive.status.#{archive.status}") %></p>
+            <p><strong>ステータス：</strong><%= t("enums.archive.status#{archive.status}") %></p>
             <div class="mt-2">
+              <%= link_to "詳細", archive_path(archive), class: "btn btn-info" %>
               <%= link_to "編集", edit_archive_path(archive), class: "btn btn-warning" %>
               <%= link_to "削除", archive_path(archive), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
             </div>
