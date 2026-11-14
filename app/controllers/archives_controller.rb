@@ -7,6 +7,11 @@ class ArchivesController < ApplicationController
     @archive = Archive.new
   end
 
+  def show
+    @archive = Archive.find(params[:id])
+    @viewing_position = ViewingPosition.find_or_initialize_by(user: current_user, archive: @archive)
+  end
+
   def create
     @archive = current_user.archives.new(archive_params)
 

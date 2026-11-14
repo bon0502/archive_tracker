@@ -3,6 +3,8 @@ class Archive < ApplicationRecord
 
   enum status: { scheduled: 0, live: 1, ended: 2 }
 
+  has_many :viewing_positions, dependent: :destroy
+
   validates :title, presence: true
   validates :video_url, presence: true
   validates :duration_seconds, numericality: { greater_than_or_equal_to: 0 }
