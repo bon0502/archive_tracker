@@ -38,6 +38,11 @@
             </div>
 
             <div class="mb-3">
+              <%= f.label :started_at, "開始日時", class: "form-label" %>
+              <%= f.datetime_field :started_at, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
               <%= f.label :status, "ステータス", class: "form-label" %>
               <%= f.select :status, Archive.statuses.keys.map { |status| [t("enums.archive.status.#{status}"), status] }, {}, { class: "form-control" } %>
             </div>
