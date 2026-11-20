@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
 
   resources :archives, only: %i[index new create show edit update destroy] do
-    resources :viewing_positions, only: %i[update]
+    resource :viewing_position, only: %i[update]
   end
 
   get "login" => "user_sessions#new"

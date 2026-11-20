@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_11_12_120348) do
+ActiveRecord::Schema[7.1].define(version: 2026_11_14_150515) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_12_120348) do
     t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "started_at"
     t.index ["user_id"], name: "index_archives_on_user_id"
   end
 
@@ -43,6 +44,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_12_120348) do
     t.integer "current_position_seconds", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "last_viewed_at"
     t.index ["archive_id"], name: "index_viewing_positions_on_archive_id"
     t.index ["user_id", "archive_id"], name: "index_viewing_positions_on_user_id_and_archive_id", unique: true
     t.index ["user_id"], name: "index_viewing_positions_on_user_id"

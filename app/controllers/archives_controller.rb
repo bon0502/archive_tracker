@@ -45,6 +45,6 @@ class ArchivesController < ApplicationController
   private
 
   def archive_params
-    params.require(:archive).permit(:title, :streamer_name, :video_url, :video_id, :duration_seconds, :status)
+    params.require(:archive).permit(:title, :streamer_name, :video_url, :video_id, :duration_seconds, :status, :started_at)
   end
 end
