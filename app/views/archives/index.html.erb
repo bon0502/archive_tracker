@@ -13,9 +13,9 @@
           <div class="card-body">
             <p style="font-size: 24px; font-weight: bold; text-align: center;"><%= archive.title %></p>
             <p><strong>配信者名：</strong><%= archive.streamer_name %></p>
-            <p><strong>再生時間：</strong><%= archive.duration_seconds %></p>
+            <p><strong>再生時間：</strong><%= archive.duration_formatted %></p>
             <p><strong>開始日時：</strong><%= archive.started_at %></p>
-            <p><strong>ステータス：</strong><%= t("enums.archive.status#{archive.status}") %></p>
+            <p><strong>ステータス：</strong><%= t("enums.archive.status.#{archive.status}") %></p>
             <div class="mt-2">
               <%= link_to "詳細", archive_path(archive), class: "btn btn-info" %>
               <%= link_to "編集", edit_archive_path(archive), class: "btn btn-warning" %>
