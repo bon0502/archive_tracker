@@ -5,12 +5,10 @@
 <% end %>
 
 <div class="top-wrapper">
-  <div class="top-inner-text">
-    <h1>Welcome to Archive Tracker</h1>
-    <p>Track and manage your archives efficiently.</p>
-    <%= link_to 'Get Started', archives_path, class: 'btn btn-primary' %>
-  </div>
   <div class="top-image">
-    <%# image_tag '#', alt: 'Archive Image' %>
+    <%= image_tag 'topmozi.png', class: 'top_logo' %>
+  </div>
+  <div class="top-inner-text">
+    <%= link_to '⭐︎スタート⭐︎', archives_path, class: 'btn btn-primary large-btn' %>
   </div>
 </div>

@@ -11,9 +11,53 @@ body {
 .btn-primary {
   background-color: #ABD3D8;
   border-color: #ABD3D8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
   background-color: #8AC6CC;
   border-color: #8AC6CC;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: #ACA7BB;
+  border-color: #ACA7BB;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: #aca7bbc7;
+  border-color: #aca7bbc7;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.btn-warning {
+  background-color: #3E62AF;
+  border-color: #3E62AF;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning:hover {
+  background-color: #3e62afbb;
+  border-color: #3e62afbb;
+  color: #ffffff;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.btn-danger {
+  background-color: #C03A62;
+  border-color: #C03A62;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+  background-color: #c03a62a0;
+  border-color: #c03a62a0;
+  transform: translateY(5px);
+  box-shadow: none;
 }
