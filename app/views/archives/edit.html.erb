@@ -23,7 +23,7 @@
             </div>
 
             <div class="mb-3">
-              <%= f.label :status, "ステータス", class: "form-label" %>
+              <%= f.label :status, "現在状況", class: "form-label" %>
               <%= f.select :status, Archive.statuses.keys.map { |status| [t("enums.archive.status.#{status}"), status] }, {}, class: "form-control" %>
             </div>
 

@@ -9,6 +9,8 @@
     <%= image_tag 'topmozi.png', class: 'top_logo' %>
   </div>
   <div class="top-inner-text">
-    <%= link_to '⭐︎スタート⭐︎', archives_path, class: 'btn btn-primary large-btn' %>
+    <%= link_to archives_path, class: 'btn btn-primary large-btn' do %>
+      <i class="bi bi-dpad"></i>　スタート　<i class="bi bi-dpad-fill"></i>
+    <% end %>
   </div>
 </div>

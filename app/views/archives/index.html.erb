@@ -15,11 +15,13 @@
             <p><strong>配信者名：</strong><%= archive.streamer_name %></p>
             <p><strong>再生時間：</strong><%= archive.duration_formatted %></p>
             <p><strong>開始日時：</strong><%= archive.started_at %></p>
-            <p><strong>ステータス：</strong><%= t("enums.archive.status.#{archive.status}") %></p>
+            <p><strong>現在状況：</strong><%= t("enums.archive.status.#{archive.status}") %></p>
           </div>
         </div>
       </div>
     <% end %>
-    <%= link_to "⊕　新しい動画を登録", new_archive_path, class: "btn btn-primary mb-4 mt-4" %>
+    <%= link_to new_archive_path, class: "btn btn-primary mb-4 mt-4" do %>
+      <i class="bi bi-plus-circle"></i>　新しい動画を登録
+    <% end %>
   </div>
 </div>
