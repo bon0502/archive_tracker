@@ -61,3 +61,13 @@ body {
   transform: translateY(5px);
   box-shadow: none;
 }
+
+.breadcrumbs a {
+  color: #8AC6CC;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+  color: #000000;
+  }
+}

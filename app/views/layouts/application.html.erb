@@ -20,6 +20,7 @@
     <% end %>
 
     <main class="flex-grow-1">
+      <%= breadcrumbs pretext: '', separator: ' &rsaquo; ' %>
       <%= yield %>
     </main>
     <%= render 'shared/footer' %>
